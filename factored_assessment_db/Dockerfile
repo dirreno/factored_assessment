@@ -1,0 +1,8 @@
+FROM mysql:5.7
+
+ENV MYSQL_ROOT_PASSWORD=admin
+ENV MYSQL_DATABASE=factored_assessment_db
+ENV MYSQL_USER=admin
+ENV MYSQL_PASSWORD=admin
+
+EXPOSE 3306
