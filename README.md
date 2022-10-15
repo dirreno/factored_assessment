@@ -7,10 +7,12 @@ image creation:
 ```
    $ docker build -t factored_assessment_db . 
 ```
+
 run container:
 ```
 docker run -d -t -i -p 3306:3306 --name factored_assessment_db factored_assessment_db
 ```
+
 run phpMyAdmin:
 ```
 docker run --name db_client -d --link swarch2022ii_db:db -p 8081:80 phpmyadmin
@@ -23,9 +25,15 @@ start python's virtual environment:
 ```
 env\Scripts\activate 
 ```
+
 If missing, install libraries:
 ```
-pip install fastapi uvicorn sqlalchemy pymysql
+pip install fastapi uvicorn pydantic sqlalchemy pymysql
+```
+
+Run the FastAPI with uvicorn:
+```
+uvicorn app:app --reload
 ```
 Go to the API Rest in this direction:
 ```
@@ -42,10 +50,12 @@ npm install --save react-modal-login
 ```
 npm i react-inlinesvg
 ```
+
 To run the React component:
 ```
 npm start
 ```
+
 To see the UI go to:
 ```
 http://localhost:3000/
